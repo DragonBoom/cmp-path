@@ -107,7 +107,8 @@ source._dirname = function(self, params, option)
     -- Ignore / comment
     accept = accept and (not prefix:match('^[%s/]*$') or not self:_is_slash_comment())
     if accept then
-      return vim.fn.resolve('/' .. dirname)
+      -- 2023.03.26 / = cwd 
+      return vim.fn.resolve(vim.fn.getcwd() .. dirname)
     end
   end
   return nil
