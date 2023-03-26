@@ -1,5 +1,7 @@
 # cmp-path
 
+fork for enter / => cwd
+
 nvim-cmp source for filesystem paths.
 
 # Setup
